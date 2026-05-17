@@ -1,0 +1,18 @@
+# codewatch.yml — Example configuration
+# Copy to codewatch.yml and customize
+
+watchers:
+  - name: "Run Tests on Save"
+    watch: "src/"
+    run: "npm test"
+    debounce: 500
+
+  - name: "Lint Python Files"
+    watch: "**/*.py"
+    run: "flake8 ."
+    debounce: 300
+
+  - name: "Rebuild on Config Change"
+    watch: "config/"
+    run: "bash scripts/build.sh"
+    debounce: 1000
